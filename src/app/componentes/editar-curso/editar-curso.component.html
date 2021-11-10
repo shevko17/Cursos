@@ -1,0 +1,62 @@
+<h2>Editar Curso</h2>
+<div *ngIf="!activarMsg" class="formulario">
+<form [formGroup]="formulario" class="inputs" (ngSubmit)="validacion()">
+    <div class="row mb-3">
+        <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="nombre">
+            <div  *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-danger">
+                Campo obligatorio
+               </div>
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Nota 1" formControlName="nota1">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Porcentaje" formControlName="porcentaje1">
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Nota 2" formControlName="nota2">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Porcentaje" formControlName="porcentaje2">
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Nota 3" formControlName="nota3">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Porcentaje" formControlName="porcentaje3">
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Nota 4" formControlName="nota4">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Porcentaje" formControlName="porcentaje4">
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Nota 5" formControlName="nota5">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" placeholder="Porcentaje" formControlName="porcentaje5">
+        </div>
+    </div>
+    <div class="buttons-container">
+        <button  class="btn btn-primary" [disabled]="!formulario.valid">Editar</button>
+          <button class="btn btn-primary" type="reset">Limpiar</button>
+        
+      </div> 
+</form>
+</div>
+<div *ngIf="activarMsg">
+    Se ha editado la asignatura.
+</div>

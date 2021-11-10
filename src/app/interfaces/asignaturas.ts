@@ -1,0 +1,70 @@
+export interface Asignatura {
+    
+    nombre:string;
+    nota1:number;
+    porcentaje1:number;
+    nota2:number;
+    porcentaje2:number;
+    nota3:number;
+    porcentaje3:number;
+    nota4:number;
+    porcentaje4:number;
+    nota5:number;
+    porcentaje5:number;
+}
+
+
+export let ListaAsignaturas:Array<Asignatura>=[
+{   
+    nombre:"Física",
+    nota1:6.7,
+    porcentaje1:20,
+    nota2:6.7,
+    porcentaje2:20,
+    nota3:6.7,
+    porcentaje3:20,
+    nota4:6.7,
+    porcentaje4:20,
+    nota5:6.7,
+    porcentaje5:20,
+},
+{   
+    nombre:"Matemáticas",
+    nota1:5.0,
+    porcentaje1:20,
+    nota2:5.0,
+    porcentaje2:20,
+    nota3:5.0,
+    porcentaje3:20,
+    nota4:5.0,
+    porcentaje4:20,
+    nota5:5.0,
+    porcentaje5:20,
+},
+{   
+    nombre:"Programación",
+    nota1:3.0,
+    porcentaje1:20,
+    nota2:3.0,
+    porcentaje2:20,
+    nota3:3.0,
+    porcentaje3:20,
+    nota4:3.0,
+    porcentaje4:20,
+    nota5:3.0,
+    porcentaje5:20,
+},
+{   
+    nombre:"Ingeniería Web",
+    nota1:6.9,
+    porcentaje1:20,
+    nota2:6.9,
+    porcentaje2:20,
+    nota3:6.9,
+    porcentaje3:20,
+    nota4:6.9,
+    porcentaje4:20,
+    nota5:6.9,
+    porcentaje5:20,
+}
+]

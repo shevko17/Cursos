@@ -1,0 +1,32 @@
+.bueno{
+    border: 2px solid black;
+    height:50px;
+    width: 800px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.medio{
+    border: 2px solid black;
+    height:50px;
+    width: 800px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: yellow;
+}
+.malo{
+    border: 2px solid black;
+    height:50px;
+    width: 800px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: red;
+}
+.lista{
+    list-style:none
+}
+.material-icons{
+    font-size: 40px;
+}

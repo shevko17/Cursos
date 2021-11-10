@@ -1,0 +1,15 @@
+<ul>
+    <li class="lista" *ngFor="let asignatura of ListaAsignaturas">
+        <div [ngClass]="{bueno:clase(promedio(asignatura.nota1,asignatura.porcentaje1,asignatura.nota2,asignatura.porcentaje2,asignatura.nota3,asignatura.porcentaje3,asignatura.nota4,asignatura.porcentaje4,asignatura.nota5,asignatura.porcentaje5))==1, medio:clase(promedio(asignatura.nota1,asignatura.porcentaje1,asignatura.nota2,asignatura.porcentaje2,asignatura.nota3,asignatura.porcentaje3,asignatura.nota4,asignatura.porcentaje4,asignatura.nota5,asignatura.porcentaje5))==2, malo:clase(promedio(asignatura.nota1,asignatura.porcentaje1,asignatura.nota2,asignatura.porcentaje2,asignatura.nota3,asignatura.porcentaje3,asignatura.nota4,asignatura.porcentaje4,asignatura.nota5,asignatura.porcentaje5))==3}">
+            <h2>{{asignatura.nombre}}</h2>
+            <p>promedio hasta ahora {{promedio(asignatura.nota1,asignatura.porcentaje1,asignatura.nota2,asignatura.porcentaje2,asignatura.nota3,asignatura.porcentaje3,asignatura.nota4,asignatura.porcentaje4,asignatura.nota5,asignatura.porcentaje5)}}</p>
+            <span class="material-icons md-48" *ngIf="clase(promedio(asignatura.nota1,asignatura.porcentaje1,asignatura.nota2,asignatura.porcentaje2,asignatura.nota3,asignatura.porcentaje3,asignatura.nota4,asignatura.porcentaje4,asignatura.nota5,asignatura.porcentaje5))==1">
+                sentiment_satisfied_alt
+            </span>
+            <span class="material-icons md-48" *ngIf="clase(promedio(asignatura.nota1,asignatura.porcentaje1,asignatura.nota2,asignatura.porcentaje2,asignatura.nota3,asignatura.porcentaje3,asignatura.nota4,asignatura.porcentaje4,asignatura.nota5,asignatura.porcentaje5))!=1">
+                sentiment_dissatisfied
+            </span>
+            <button [routerLink]="['/editarCurso',asignatura.nombre]" routerLinkActive="router-link-active">Editar</button>
+        </div>
+    </li>
+</ul>
